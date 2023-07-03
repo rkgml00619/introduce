@@ -1,0 +1,536 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  line-height: 1;
+}
+
+ul, ol, li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+}
+
+img, video {
+  vertical-align: top;
+}
+
+input, button {
+  outline: none;
+}
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+.poppins {
+  font-family: "Poppins", sans-serif;
+}
+
+#header {
+  display: flex;
+  justify-content: center;
+  background: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  border-bottom: 1px solid #ccc;
+  transition: all 0.5s;
+}
+#header .center {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 0 30px;
+}
+#header .center .logo {
+  width: 120px;
+  position: relative;
+}
+#header .center .logo img {
+  width: 100%;
+  transition: all 0.5s;
+}
+#header .center .logo .logo_bk {
+  opacity: 1;
+}
+#header .center .logo .logo_wh {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+#header .center .gnb {
+  display: flex;
+}
+#header .center .gnb li {
+  margin-left: 40px;
+}
+#header .center .gnb li:hover a::before {
+  top: -8px;
+  left: 2px;
+  opacity: 1;
+}
+#header .center .gnb li a {
+  font-size: 18px;
+  font-weight: 300;
+  color: #000;
+  position: relative;
+}
+#header .center .gnb li a::before {
+  content: "";
+  display: block;
+  width: 7px;
+  height: 7px;
+  border-radius: 100%;
+  position: absolute;
+  top: -30px;
+  left: 0;
+  background: #f53024;
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+#header.on {
+  background: transparent;
+  border-bottom: 1px solid transparent;
+}
+#header.on .center .logo .logo_bk {
+  opacity: 0;
+}
+#header.on .center .logo .logo_wh {
+  opacity: 1;
+}
+#header.on .center .gnb li a {
+  color: #fff;
+}
+#header.on .center .gnb li a::before {
+  background: #fff;
+}
+
+.main {
+  width: 100%;
+  height: 100vh;
+  background: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.main .bg_circleWrap .bg_circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  background: #F53024;
+  transition: all 10s;
+}
+.main .bg_circleWrap .bg_circle.left {
+  left: -100px;
+}
+.main .bg_circleWrap .bg_circle.right {
+  left: calc(100% + 100px);
+}
+.main .bg_circleWrap.on .bg_circle.left {
+  animation: circleAnimationLeft 2s ease-in 1 forwards;
+}
+.main .bg_circleWrap.on .bg_circle.right {
+  animation: circleAnimationRight 2s ease-in 1 forwards;
+}
+@keyframes circleAnimationLeft {
+  0% {
+    left: -100px;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+  }
+  60% {
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+  }
+  100% {
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150vw;
+    height: 150vw;
+  }
+}
+@keyframes circleAnimationRight {
+  0% {
+    left: calc(100% + 100px);
+    transform: translate(0, -50%);
+    width: 50px;
+    height: 50px;
+  }
+  60% {
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+  }
+  100% {
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150vw;
+    height: 150vw;
+  }
+}
+.main .center {
+  width: 65%;
+  z-index: 20;
+}
+.main .center p {
+  color: #fff;
+  font-weight: 300;
+  font-size: 36px;
+  letter-spacing: -0.5px;
+  text-align: center;
+}
+.main .center .title {
+  font-size: 140px;
+  font-weight: 800;
+  line-height: 1.4;
+  letter-spacing: -0.5px;
+  color: #fff;
+  text-align: center;
+  mix-blend-mode: multiply;
+}
+.main .center .title span {
+  font-weight: 300;
+}
+
+.sectionTitle {
+  font-size: 60px;
+  padding-bottom: 10px;
+  margin-bottom: 60px;
+}
+.sectionTitle::after {
+  content: "";
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background: #F53024;
+  border-radius: 100%;
+}
+.sectionTitle span {
+  display: block;
+  font-weight: 300;
+  margin-bottom: 10px;
+  font-size: 50px;
+}
+
+.profile {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background: #333;
+  transition: all 1s;
+}
+.profile .profileWrap {
+  width: 100%;
+  min-height: 100vh;
+  background: #fff;
+  padding: 200px 0;
+  box-sizing: border-box;
+  transform: scale(0.6);
+  transition: all 1s;
+  display: flex;
+  justify-content: center;
+}
+.profile .profileWrap .center {
+  width: 80%;
+}
+.profile .profileWrap .center .profileConts {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 80px;
+}
+.profile .profileWrap .center .profileConts > div {
+  width: 45%;
+}
+.profile .profileWrap .center .profileConts > div .conts {
+  min-height: 130px;
+}
+.profile .profileWrap .center .profileConts > div .conts:last-child {
+  margin-bottom: 0;
+}
+.profile .profileWrap .center .profileConts > div .conts .listTitle {
+  font-size: 26px;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #000;
+}
+.profile .profileWrap .center .profileConts > div .conts .listWrap {
+  display: flex;
+  justify-content: space-between;
+}
+.profile .profileWrap .center .profileConts > div .conts .listWrap .list {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.4;
+  word-break: keep-all;
+}
+.profile .profileWrap .center .profileConts > div .conts .listWrap .list li {
+  margin-bottom: 20px;
+}
+.profile .profileWrap .center .profileConts > div .conts .listWrap .list li:last-child {
+  margin-bottom: 0;
+}
+.profile .profileWrap .center .profileConts > div .conts .listWrap .list.right {
+  text-align: right;
+}
+.profile .profileWrap .center .profileConts .right {
+  width: 45%;
+}
+
+.portfolio {
+  display: flex;
+  justify-content: center;
+  background: #333;
+  padding: 150px 0;
+}
+.portfolio .center {
+  width: 80%;
+}
+.portfolio .center .sectionTitle {
+  color: #fff;
+  margin-bottom: 80px;
+}
+.portfolio .center .portfolioConts .tabMenu {
+  width: 100%;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  color: #fff;
+  margin-bottom: 60px;
+}
+.portfolio .center .portfolioConts .tabMenu li {
+  margin-right: 30px;
+  font-size: 24px;
+  position: relative;
+  padding-bottom: 20px;
+  color: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.portfolio .center .portfolioConts .tabMenu li:hover {
+  color: #fff;
+}
+.portfolio .center .portfolioConts .tabMenu li:hover::after {
+  background: #fff;
+}
+.portfolio .center .portfolioConts .tabMenu li::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: transparent;
+  margin-top: 20px;
+  position: absolute;
+  top: 20px;
+  left: 0;
+  transition: all 0.5s;
+}
+.portfolio .center .portfolioConts .tabMenu li.on {
+  color: #fff;
+}
+.portfolio .center .portfolioConts .tabMenu li.on::after {
+  background: #fff;
+}
+.portfolio .center .portfolioConts .tabConts {
+  width: 100%;
+  min-height: 80vh;
+  color: #fff;
+  position: relative;
+}
+.portfolio .center .portfolioConts .tabConts .tabList {
+  position: absolute;
+  width: 100%;
+  justify-content: space-between;
+  opacity: 0;
+  transform: translateY(-50px);
+  display: none;
+  transition: all 1s;
+}
+.portfolio .center .portfolioConts .tabConts .tabList .left {
+  width: 48%;
+  height: 80vh;
+  overflow: hidden;
+}
+.portfolio .center .portfolioConts .tabConts .tabList .left img {
+  width: 100%;
+}
+.portfolio .center .portfolioConts .tabConts .tabList .right {
+  width: 48%;
+  position: relative;
+  padding: 20px 0;
+  box-sizing: border-box;
+}
+.portfolio .center .portfolioConts .tabConts .tabList .right .portfolioTitle {
+  font-size: 40px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  margin-bottom: 60px;
+}
+.portfolio .center .portfolioConts .tabConts .tabList .right .responBtn {
+  margin-bottom: 40px;
+}
+.portfolio .center .portfolioConts .tabConts .tabList .right .responBtn .btn {
+  display: inline-block;
+  color: #fff;
+  padding: 14px 30px;
+  border: 1px solid #fff;
+  font-size: 16px;
+  font-weight: 300;
+  margin-right: 10px;
+  transition: all 0.5s;
+}
+.portfolio .center .portfolioConts .tabConts .tabList .right .responBtn .btn:hover {
+  background: #F53024;
+  border: 1px solid #F53024;
+}
+.portfolio .center .portfolioConts .tabConts .tabList .right .content {
+  display: flex;
+  padding: 30px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+.portfolio .center .portfolioConts .tabConts .tabList .right .content:last-child {
+  border-bottom: 0;
+}
+.portfolio .center .portfolioConts .tabConts .tabList .right .content .contentTitle {
+  width: 120px;
+  font-size: 18px;
+  font-weight: 200;
+}
+.portfolio .center .portfolioConts .tabConts .tabList .right .content .txt {
+  font-size: 18px;
+  font-weight: 200;
+}
+.portfolio .center .portfolioConts .tabConts .tabList .right .content .detail ul {
+  font-size: 18px;
+  font-weight: 200;
+  margin-bottom: 30px;
+}
+.portfolio .center .portfolioConts .tabConts .tabList .right .content .detail ul li {
+  margin-bottom: 10px;
+}
+.portfolio .center .portfolioConts .tabConts .tabList .right .content .detail ul li:first-child {
+  display: flex;
+  align-items: center;
+}
+.portfolio .center .portfolioConts .tabConts .tabList .right .content .detail ul li:first-child::before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background: #F53024;
+  border-radius: 50%;
+  margin-right: 6px;
+}
+.portfolio .center .portfolioConts .tabConts .tabList .right .content .detail ul li:last-child {
+  margin-bottom: 0;
+}
+.portfolio .center .portfolioConts .tabConts .tabList.on {
+  transform: translateY(0);
+  display: flex;
+  opacity: 1;
+}
+
+.otherWork {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background: #333;
+  transition: all 1s;
+}
+.otherWork .otherWorkWrap {
+  width: 100%;
+  min-height: 100vh;
+  background: #fff;
+  padding: 200px 0;
+  box-sizing: border-box;
+  transform: scale(0.6);
+  transition: all 1s;
+  display: flex;
+  justify-content: center;
+}
+.otherWork .otherWorkWrap .center {
+  width: 80%;
+}
+.otherWork .otherWorkWrap .center .profileConts {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 80px;
+}
+.otherWork .otherWorkWrap .center .profileConts > div {
+  width: 45%;
+}
+.otherWork .otherWorkWrap .center .profileConts > div .conts {
+  min-height: 130px;
+}
+.otherWork .otherWorkWrap .center .profileConts > div .conts:last-child {
+  margin-bottom: 0;
+}
+.otherWork .otherWorkWrap .center .profileConts > div .conts .listTitle {
+  font-size: 26px;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #000;
+}
+.otherWork .otherWorkWrap .center .profileConts > div .conts .listWrap {
+  display: flex;
+  justify-content: space-between;
+}
+.otherWork .otherWorkWrap .center .profileConts > div .conts .listWrap .list {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.4;
+  word-break: keep-all;
+}
+.otherWork .otherWorkWrap .center .profileConts > div .conts .listWrap .list li {
+  margin-bottom: 20px;
+}
+.otherWork .otherWorkWrap .center .profileConts > div .conts .listWrap .list li:last-child {
+  margin-bottom: 0;
+}
+.otherWork .otherWorkWrap .center .profileConts > div .conts .listWrap .list.right {
+  text-align: right;
+}
+.otherWork .otherWorkWrap .center .profileConts .right {
+  width: 45%;
+}
+
+.contact {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 150px 0;
+  box-sizing: border-box;
+  background: #F53024;
+}
+.contact .center {
+  width: 80%;
+}
+.contact .center .sectionTitle {
+  color: #fff;
+}
+.contact .center .sectionTitle::after {
+  background: #fff;
+}
