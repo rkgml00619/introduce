@@ -60,6 +60,14 @@
                     }
                 }
             }
+            li.on {
+                a {
+                    &::before {
+                        top: -8px; left: 2px;
+                        opacity: 1;
+                    }
+                }
+            }
         }
     }
 }

@@ -1,7 +1,7 @@
 <%- include('header.ejs') %>
 
 <div id="container">
-    <div class="cont1 main">
+    <div class="cont1 main section" id="main">
         <div class="bg_circleWrap">
             <div class="bg_circle left"></div>
             <div class="bg_circle right"></div>
@@ -14,7 +14,7 @@
         </div>
     </div>
 
-    <div class="cont2 profile">
+    <div class="cont2 profile section" id="profile">
         <div class="profileWrap">
             <div class="center">
                 <h2 class="sectionTitle poppins">
@@ -79,12 +79,12 @@
                             <h3 class="poppins listTitle">Awards</h3>
                             <div class="listWrap">
                                 <ul class="list left">
-                                    <li>2016.10.07</li>
                                     <li>2015.05.18</li>
+                                    <li>2019.03.30</li>
                                 </ul>
                                 <ul class="list right">
-                                    <li>영화제 수상</li>
                                     <li>어플리케이션 기획</li>
+                                    <li>고양경기문화창조허브 [방송영상·뉴미디어 페스티벌:아이디어톤] 대상</li>
                                 </ul>
                             </div>
                         </div>
@@ -115,161 +115,7 @@
         </div>
     </div>
 
-    <!-- <div class="cont3 portfolio">
-        <div class="center">
-            <h2 class="sectionTitle poppins">
-                <span>02</span>
-                PORTFOLIO
-            </h2>
-
-            <div class="swiper portfolio">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="contWrap">
-                            <div class="left">
-                                <img src="/img/portfolio/portfolio_1_1.png">
-                            </div>
-                            <div class="right">
-                                <h3 class="portfolioTitle">한국관광공사</h3>
-
-                                <div class="responBtn">
-                                    <a class="btn poppins" href="#">PC</a>
-                                    <a class="btn poppins" href="#">TABLET</a>
-                                    <a class="btn poppins" href="#">MOBILE</a>
-                                </div>
-                                
-                                <div class="content">
-                                    <p class="contentTitle">기여도</p>
-                                    <p class="txt">
-                                        디자인 100% / 퍼블리싱 100% / 제작기간 2주
-                                    </p>
-                                </div>
-                                <div class="content">
-                                    <p class="contentTitle">사용스택</p>
-                                    <p class="txt">
-                                        html / css / JavaScript / php / my sql / 카카오 지도 API
-                                    </p>
-                                </div>
-                                <div class="content">
-                                    <p class="contentTitle">구성요소</p>
-                                    <div class="detail">
-                                        <ul>
-                                            <li>서브페이지</li>
-                                            <li>기관소개 / 주요사업 / 추천행사 / 알림마당 / 국민참여 / 회원가입</li>
-                                        </ul>
-                                        <ul>
-                                            <li>게시판</li>
-                                            <li>글쓰기 / 삭제 / 수정 / 페이징</li>
-                                        </ul>
-                                        <ul>
-                                            <li>회원가입</li>
-                                            <li>정규표현식 / 아이디 중복체크</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="contWrap">
-                            <div class="left">
-                                <img src="/img/portfolio/portfolio_2.png">
-                            </div>
-                            <div class="right">
-                                <h3 class="portfolioTitle poppins">MLB PET KOREA</h3>
-
-                                <div class="responBtn">
-                                    <a class="btn poppins" href="#">PC</a>
-                                    <a class="btn poppins" href="#">TABLET</a>
-                                    <a class="btn poppins" href="#">MOBILE</a>
-                                </div>
-                                
-                                <div class="content">
-                                    <p class="contentTitle">기여도</p>
-                                    <p class="txt">
-                                        디자인 100% / 퍼블리싱 100% / 제작기간 2주
-                                    </p>
-                                </div>
-                                <div class="content">
-                                    <p class="contentTitle">사용스택</p>
-                                    <p class="txt">
-                                        html / css / JavaScript / php / my sql / 카카오 지도 API
-                                    </p>
-                                </div>
-                                <div class="content">
-                                    <p class="contentTitle">구성요소</p>
-                                    <div class="detail">
-                                        <ul>
-                                            <li>서브페이지</li>
-                                            <li>기관소개 / 주요사업 / 추천행사 / 알림마당 / 국민참여 / 회원가입</li>
-                                        </ul>
-                                        <ul>
-                                            <li>게시판</li>
-                                            <li>글쓰기 / 삭제 / 수정 / 페이징</li>
-                                        </ul>
-                                        <ul>
-                                            <li>회원가입</li>
-                                            <li>정규표현식 / 아이디 중복체크</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="contWrap">
-                            <div class="left">
-                                <img src="/img/portfolio/portfolio_3.png">
-                            </div>
-                            <div class="right">
-                                <h3 class="portfolioTitle poppins">Poke All Day</h3>
-
-                                <div class="responBtn">
-                                    <a class="btn poppins" href="#">PC</a>
-                                    <a class="btn poppins" href="#">TABLET</a>
-                                    <a class="btn poppins" href="#">MOBILE</a>
-                                </div>
-                                
-                                <div class="content">
-                                    <p class="contentTitle">기여도</p>
-                                    <p class="txt">
-                                        디자인 100% / 퍼블리싱 100% / 제작기간 2주
-                                    </p>
-                                </div>
-                                <div class="content">
-                                    <p class="contentTitle">사용스택</p>
-                                    <p class="txt">
-                                        html / css / JavaScript / php / my sql / 카카오 지도 API
-                                    </p>
-                                </div>
-                                <div class="content">
-                                    <p class="contentTitle">구성요소</p>
-                                    <div class="detail">
-                                        <ul>
-                                            <li>서브페이지</li>
-                                            <li>기관소개 / 주요사업 / 추천행사 / 알림마당 / 국민참여 / 회원가입</li>
-                                        </ul>
-                                        <ul>
-                                            <li>게시판</li>
-                                            <li>글쓰기 / 삭제 / 수정 / 페이징</li>
-                                        </ul>
-                                        <ul>
-                                            <li>회원가입</li>
-                                            <li>정규표현식 / 아이디 중복체크</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="swiper-pagination"></div>
-            </div>
-        </div>
-    </div> -->
-
-    <div class="cont3 portfolio">
+    <div class="cont3 portfolio section" id="portfolio">
         <div class="center">
             <h2 class="sectionTitle poppins">
                 <span>02</span>
@@ -294,7 +140,11 @@
                                 <a class="btn poppins" href="#">TABLET</a>
                                 <a class="btn poppins" href="#">MOBILE</a>
                             </div>
-                            
+
+                            <div class="content">
+                                <p class="contentTitle">제작방향</p>
+                                <p class="detailText">일반 관광 소비자들의 유입을 목적으로 관광지 또는 축제 등의 정보전달을 주 목적 컨텐츠로 설정하였습니다. 목적 컨텐츠의 레이아웃을 동적으로 구현하고, 시각적인 요소들을 다양하게 활용하여 전달하고자 하는 요소를 강조하였습니다.</p>
+                            </div>
                             <div class="content">
                                 <p class="contentTitle">기여도</p>
                                 <p class="txt">
@@ -338,7 +188,11 @@
                                 <a class="btn poppins" href="#">TABLET</a>
                                 <a class="btn poppins" href="#">MOBILE</a>
                             </div>
-                            
+
+                            <div class="content">
+                                <p class="contentTitle">제작방향</p>
+                                <p class="detailText">MLB KOREA의 PET 라인을 따로 브랜드화하여 홈페이지를 제작하였습니다. 풀페이지를 활용하여 브랜드가 갖고 있는 스포티한 이미지를 표현하였고, 크고 볼드한 텍스트를 포인트 요소로 활용하여 신규 라인의 아이덴티티를 강조하였습니다.</p>
+                            </div>
                             <div class="content">
                                 <p class="contentTitle">기여도</p>
                                 <p class="txt">
@@ -382,7 +236,11 @@
                                 <a class="btn poppins" href="#">TABLET</a>
                                 <a class="btn poppins" href="#">MOBILE</a>
                             </div>
-                            
+
+                            <div class="content">
+                                <p class="contentTitle">제작방향</p>
+                                <p class="detailText">젊은 소비자들이 주 타겟층인 체인 브랜드이기 때문에 팝한 컬러를 메인으로 사용하였고, 레이아웃은 비교적 단순화하여 균형감을 맞추었습니다. 사용자의 움직임에 따른 동적 애니메이션을 추가하여 젊은 소비자들의 흥미를 지속적으로 유지할 수 있도록 제작하였습니다.</p>
+                            </div>
                             <div class="content">
                                 <p class="contentTitle">기여도</p>
                                 <p class="txt">
@@ -419,23 +277,144 @@
         </div>
     </div>
 
-    <div class="cont4 otherWork">
+    <div class="cont4 otherWork section" id="otherWork">
         <div class="otherWorkWrap">
             <div class="center">
                 <h2 class="sectionTitle poppins">
                     <span>03</span>
                     OTHER WORKS
                 </h2>
+                
+                <div class="otherConts">
+                    <ul class="tabMenu">
+                        <li>웹디자인</li>
+                        <li>그래픽디자인</li>
+                        <li>기획/제안서</li>
+                    </ul>
+                    <div class="tabConts">
+                        <% for( let i = 0; i < otherWorkData.length; i++ ) { %>
+                            <% if (otherWorkData[i].category === "webDesign") { %>
+                                <div class="tabList <%-otherWorkData[i].category%>">
+                                    <% for( let a = 0; a < otherWorkData[i].data.length; a++ ) { %>
+                                        <div class="contWrap">
+                                            <img src="/img/other/<%-otherWorkData[i].data[a].thumbImg%>">
+                                            <div class="conText">
+                                                <a class="linkBtn" href="#">
+                                                    <h3><%-otherWorkData[i].data[a].title%></h3>
+                                                    <span class="material-symbols-outlined plusIcon">add</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    <% } %>
+                                </div>
+                            <% } else if (otherWorkData[i].category === "graphicDesign") { %>
+                                <div class="tabList <%-otherWorkData[i].category%>">
+                                    <% for( let a = 0; a < otherWorkData[i].data.length; a++ ) { %>
+                                        <div class="contWrap">
+                                            <img src="/img/other/<%-otherWorkData[i].data[a].thumbImg%>">
+                                            <div class="conText">
+                                                <a class="linkBtn" href="#">
+                                                    <h3><%-otherWorkData[i].data[a].title%></h3>
+                                                    <span class="material-symbols-outlined plusIcon">add</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    <% } %>
+                                </div>
+                            <% } else if (otherWorkData[i].category === "proposal") { %>
+                                <div class="tabList <%-otherWorkData[i].category%>">
+                                    <% for( let a = 0; a < otherWorkData[i].data.length; a++ ) { %>
+                                        <div class="contWrap">
+                                            <img src="/img/other/<%-otherWorkData[i].data[a].thumbImg%>">
+                                            <div class="conText">
+                                                <a class="linkBtn" href="#">
+                                                    <h3><%-otherWorkData[i].data[a].title%></h3>
+                                                    <span class="material-symbols-outlined plusIcon">add</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    <% } %>
+                                </div>
+                            <% } %>
+                        <% } %>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="otherWork modal">
+            <div class="center">
+                <div class="left">
+                    <img src="">
+                </div>
+                <div class="right">
+                    <h3 class="modalTitle"></h3>
+
+                    <div class="linkBtn">
+                        <a class="btn poppins" href="" target="_blank">홈페이지 바로가기</a>
+                    </div>
+                    
+                    <div class="contentWrap">
+                        <!-- <div class="content">
+                            <p class="contentTitle"></p>
+                            <p class="detailText"></p>
+                        </div> -->
+                    </div>
+
+                    <a class="closeBtn" href="#">
+                        <span class="material-symbols-outlined closeIcon">close</span>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
 
-    <div class="cont5 contact">
+    <div class="cont5 contact section" id="contact">
         <div class="center">
             <h2 class="sectionTitle poppins">
                 <span>04</span>
                 CONTACT
             </h2>
+            
+            <div class="contactConts">
+                <div class="left">
+                    <h2 class="contactTitle">
+                        우연을 기회로 잡을 줄 사람,<br>
+                        <strong>한가희</strong>입니다.
+                    </h2>
+                </div>
+                <div class="right">
+                    <h3 class="rightTitle poppins">Contact Info</h3>
+                    <div class="infoWrap">
+                        <div class="infoList">
+                            <p class="infoTitle">전화번호</p>
+                            <p class="infoDetail">010 - 5171 - 1368</p>
+                        </div>
+                        <div class="infoList">
+                            <p class="infoTitle">이메일</p>
+                            <p class="infoDetail">rkgml00619@naver.com</p>
+                        </div>
+                        <div class="infoList">
+                            <p class="infoTitle">Github</p>
+                            <a class="infoDetail" href="#">
+                                <span class="material-symbols-outlined linkIcon">link</span>
+                                github 바로가기
+                            </a>
+                        </div>
+                        <div class="infoList">
+                            <p class="infoTitle">기술블로그</p>
+                            <a class="infoDetail" href="#">
+                                <span class="material-symbols-outlined linkIcon">link</span>
+                                기술블로그 바로가기
+                            </a>
+                        </div>
+                        <div class="infoList">
+                            <p class="infoTitle">이력서</p>
+                            <a class="infoDetail down" href="#">이력서 다운로드</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>

@@ -1,5 +1,6 @@
 const section = document.querySelectorAll("#container > div");
 const header = document.querySelector("#header");
+const headerMenu = document.querySelectorAll("#header .center .gnb li");
 const bgCircle = document.querySelector(".main .bg_circleWrap");
 const profileWrap = document.querySelector("#container .profile .profileWrap");
 const otherWorkWrap = document.querySelector("#container .otherWork .otherWorkWrap");
@@ -8,17 +9,26 @@ window.addEventListener("scroll", function(){
     let windowPosition = window.scrollY;
     
     // header on클래스 제어
-    if(windowPosition <= section[1].offsetTop - 200){
+    if(windowPosition <= section[1].offsetTop - 200 || windowPosition >= section[4].offsetTop - 200){
         header.classList.add("on");
         header.style.background = "transparent";
     }
     else if(windowPosition >= section[2].offsetTop - 200 && windowPosition < section[3].offsetTop){
         header.classList.add("on");
-        header.style.background = "#333";
+        header.style.background = "#111";
     }
     else {
         header.classList.remove("on");
         header.style.background = "#fff";
+    }
+
+    for(let i = 0; i < section.length; i++){
+        if(windowPosition >= section[i].offsetTop){
+            headerMenu.forEach(function(headerMenu){
+                headerMenu.classList.remove("on");
+            });
+            headerMenu[i].classList.add("on");
+        }
     }
 
     // profile 섹션 크기 제어 - 화면에 도달할 때
@@ -26,11 +36,7 @@ window.addEventListener("scroll", function(){
         profileWrap.style.transform = "scale(1)";
     }
     else {
-        profileWrap.style.transform = "scale(0.8)";
-    }
-    // profile 섹션 크기 제어 - 다음화면으로 넘어갔을 때
-    if(windowPosition >= section[2].offsetTop - 400){
-        profileWrap.style.transform = "scale(0.8)";
+        profileWrap.style.transform = "scale(0.9)";
     }
 
     // otherWork 섹션 크기 제어 - 화면에 도달할 때
@@ -38,11 +44,7 @@ window.addEventListener("scroll", function(){
         otherWorkWrap.style.transform = "scale(1)";
     }
     else {
-        otherWorkWrap.style.transform = "scale(0.8)";
-    }
-    // otherWork 섹션 크기 제어 - 다음화면으로 넘어갔을 때
-    if(windowPosition >= section[4].offsetTop - 400){
-        otherWorkWrap.style.transform = "scale(0.8)";
+        otherWorkWrap.style.transform = "scale(0.9)";
     }
 });
 
@@ -51,7 +53,7 @@ window.addEventListener("scroll", function(){
 window.addEventListener("wheel", function(e){
     let windowPosition = window.scrollY;
     
-    if(windowPosition < section[1].offsetTop && e.deltaY < 0){
+    if(windowPosition < section[1].offsetTop - 400 && e.deltaY < 0){
         bgCircle.classList.remove("on");
         setTimeout(function(){
             bgCircle.classList.add("on");
